@@ -6,6 +6,7 @@
 	:root {
 		--background: hsl(0 0% 100%);
 		--foreground: hsl(0 0% 12%);
+		--dark: hsl(0 0% 21%);
 
 		--card: hsl(0 0% 100%);
 		--card-foreground: hsl(222.2 84% 4.9%);
@@ -79,4 +80,16 @@
 }
 .bg-primary {
 	background: linear-gradient(140.24deg, #ffc834 15.16%, #e29534 84.43%);
+}
+.tooltip-bottom:after {
+	content: '';
+	background: var(--foreground);
+	border-top: 1px solid var(--primary);
+	border-left: 1px solid var(--primary);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	height: 20px;
+	width: 20px;
 }

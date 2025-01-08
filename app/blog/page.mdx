@@ -1,0 +1,70 @@
+import { Button } from '@/components/ui/button'
+
+export const metadata = {
+    author: 'John Doe',
+    title: 'MDX PAGE'
+}
+
+export const year = 2024;
+export function test() {
+    // nie działa tutaj context przeglądarkowy, czyli window itp.
+    const random = Math.random();
+    return (random * 100).toFixed(2);
+}
+
+<section className='container'>
+    # Główny nagłówek
+    ## Nagłówek drugiego stopnia
+    ### Nagłówek trzeciego stopnia
+    #### Nagłówek czwartego stopnia
+
+    Pogrubiona **czcionka**, czcionka *italic*.
+
+    > Block quote
+
+    Tak się tworzy listę ul:
+    * Jeden
+    * Dwa
+    * Trzy
+
+    Tak się tworzy listę ol:
+    1. Jeden
+    2. Dwa
+    3. Trzy
+
+    <br />
+    <br />
+    <br />
+    <br />
+    [Next.js](https://nextjs.org)\
+    [Strona główna](/)
+    ![Baner](/baner_ekino.jpg)
+    
+    <br />
+    <br />
+
+    ***
+    
+    ```ts
+        function testABC() {
+            console.log('abc');
+        }
+    ```
+
+    Fragment kodu Inline: `console.log('test')`
+
+    {/* Komentarze robimy w ten sposób */}
+
+    {test()}
+
+    Aktualnie mamy rok: {year}
+
+    <div className='text-center'>
+        <Button>Start</Button>
+    </div>
+    \
+    \
+    \
+    Jakiś tekst\
+    Tekst pod spodem
+</section>
